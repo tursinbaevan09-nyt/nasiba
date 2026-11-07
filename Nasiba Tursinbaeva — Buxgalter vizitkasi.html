@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tursinbaeva Nasiba — Buxgalter</title>
+<meta name="description" content="Buxgalter Tursinbaeva Nasiba Nietbaevna: buxgalteriya hisobi, soliq hisoboti, ish haqi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EAF0EE; --ink:#0F2E3A; --muted:#4D6770; --rule:#B9CAC6; --teal:#1B7A72; --mark:#F4C84A; --card:#F6F9F8;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --paper:#0C1F26; --ink:#E6F0EE; --muted:#9DB5B9; --rule:#27434B; --teal:#5FD0C4; --mark:#C99A1E; --card:#112A32; color-scheme:dark; }
+}
+:root[data-theme="dark"]{ --paper:#0C1F26; --ink:#E6F0EE; --muted:#9DB5B9; --rule:#27434B; --teal:#5FD0C4; --mark:#C99A1E; --card:#112A32; color-scheme:dark; }
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font:400 17px/1.6 "Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background-image:
+    linear-gradient(to right,var(--rule) 1px,transparent 1px);
+  background-size:calc(100% / 6) 100%;
+  background-attachment:fixed;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--paper);z-index:10}
+.wrap{max-width:980px;margin:0 auto;padding:clamp(20px,5vw,56px)}
+.sheet{background:var(--paper);border:1px solid var(--rule);border-radius:6px;overflow:hidden}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px clamp(16px,4vw,32px);border-bottom:1px solid var(--rule);color:var(--muted);font-size:14px}
+.top b{color:var(--ink);font-weight:600}
+.hero{padding:clamp(32px,8vw,88px) clamp(16px,4vw,32px) clamp(28px,6vw,64px)}
+h1{
+  font:800 clamp(40px,9vw,92px)/0.98 "Bricolage Grotesque",system-ui,sans-serif;
+  letter-spacing:-0.03em;margin:0 0 28px;max-width:11ch;
+}
+h1 span{display:block}
+.hl{background:linear-gradient(var(--mark),var(--mark)) 0 88%/0% 0.34em no-repeat;animation:swipe .9s .3s ease-out forwards;padding-right:.08em}
+@keyframes swipe{to{background-size:100% 0.34em}}
+.lead{max-width:46ch;font-size:clamp(18px,2.4vw,21px);color:var(--muted);margin:0 0 32px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);transition:background .15s,color .15s}
+.btn.main{background:var(--ink);color:var(--paper)}
+.btn:hover{background:var(--teal);border-color:var(--teal);color:#fff}
+a:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+
+h2{font:700 clamp(24px,4vw,34px)/1.1 "Bricolage Grotesque",sans-serif;letter-spacing:-0.02em;margin:0}
+.sec{border-top:1px solid var(--rule)}
+.sec-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:28px clamp(16px,4vw,32px) 18px}
+.sec-h small{color:var(--muted);font-size:14px}
+.ledger{width:100%;border-collapse:collapse}
+.ledger th{font-weight:500;color:var(--muted);font-size:14px;text-align:left;padding:10px clamp(16px,4vw,32px);border-top:1px solid var(--rule);border-bottom:2px solid var(--ink)}
+.ledger td{padding:18px clamp(16px,4vw,32px);border-bottom:1px solid var(--rule);vertical-align:top}
+.ledger td:first-child{font:700 19px/1.3 "Bricolage Grotesque",sans-serif;width:42%}
+.ledger td:last-child{color:var(--muted)}
+.ledger tfoot td{border-bottom:0;border-top:2px solid var(--ink);font:700 18px "Bricolage Grotesque",sans-serif;color:var(--ink)}
+.ledger tfoot td:last-child{color:var(--teal);text-align:right}
+
+.contacts{list-style:none;margin:0;padding:0}
+.contacts li{border-top:1px solid var(--rule)}
+.contacts a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:22px clamp(16px,4vw,32px);color:var(--ink);text-decoration:none;transition:background .15s}
+.contacts a:hover{background:var(--card)}
+.contacts .k{color:var(--muted);font-size:15px;min-width:92px}
+.contacts .v{font:700 clamp(18px,3.6vw,28px)/1.2 "Bricolage Grotesque",sans-serif;overflow-wrap:anywhere;text-align:right}
+footer{padding:22px clamp(16px,4vw,32px);border-top:1px solid var(--rule);color:var(--muted);font-size:14px}
+
+@media (max-width:640px){
+  .ledger thead{display:none}
+  .ledger td{display:block;width:100%!important;padding:0 16px}
+  .ledger td:first-child{padding-top:18px}
+  .ledger td:last-child{padding-bottom:18px;border-bottom:1px solid var(--rule)}
+  .ledger tfoot td{padding:14px 16px;text-align:left!important}
+  .ledger tfoot td:last-child{display:block;padding-top:0}
+}
+@media (prefers-reduced-motion:reduce){.hl{animation:none;background-size:100% .34em}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<main class="sheet">
+  <div class="top"><b>Buxgalter</b><span>Taklif va savollar uchun yozing</span></div>
+
+  <section class="hero">
+    <h1><span>Tursinbaeva</span><span>Nasiba</span><span class="hl">Nietbaevna</span></h1>
+    <p class="lead">Buxgalter. Hisob-kitoblaringizni aniq yuritaman, hisobotlarni oʻz vaqtida topshiraman.</p>
+    <div class="btns">
+      <a class="btn main" href="https://t.me/nytbvnaa" target="_blank" rel="noopener">Telegramda yozish</a>
+      <a class="btn" href="mailto:tursinbaevan09@gmail.com">Pochta yuborish</a>
+    </div>
+  </section>
+
+  <section class="sec" id="skillar">
+    <div class="sec-h"><h2>Skillar</h2><small>Nima bilan yordam beraman</small></div>
+    <table class="ledger">
+      <thead><tr><th>Yoʻnalish</th><th>Nimalarni qilaman</th></tr></thead>
+      <tbody>
+        <tr><td>Buxgalteriya hisobi</td><td>Kirim-chiqimlarni yuritish, hisob registrlari, oylik va yillik yopish.</td></tr>
+        <tr><td>Soliq hisoboti</td><td>Soliq va statistika hisobotlarini tayyorlash va oʻz muddatida topshirish.</td></tr>
+        <tr><td>Ish haqi va kadrlar</td><td>Ish haqini hisoblash, ushlanmalar, taʼtil va maʼlumotnomalar.</td></tr>
+        <tr><td>Birlamchi hujjatlar</td><td>Hisob-faktura, dalolatnoma, kassa va bank hujjatlarini rasmiylashtirish.</td></tr>
+        <tr><td>Bank va toʻlovlar</td><td>Bank hisobvaraqlari, toʻlov topshiriqnomalari va yarashuv dalolatnomalari.</td></tr>
+        <tr><td>Tahlil va nazorat</td><td>Debitor va kreditor qarzlarni kuzatish, inventarizatsiya, Excel hisobotlari.</td></tr>
+      </tbody>
+      <tfoot><tr><td>Natija</td><td>Raqamlar toʻgʻri, hujjatlar tartibda.</td></tr></tfoot>
+    </table>
+  </section>
+
+  <section class="sec" id="aloqa">
+    <div class="sec-h"><h2>Aloqa</h2><small>Qaysi biri qulay boʻlsa, shunga yozing</small></div>
+    <ul class="contacts">
+      <li><a href="https://t.me/nytbvnaa" target="_blank" rel="noopener"><span class="k">Telegram</span><span class="v">@nytbvnaa</span></a></li>
+      <li><a href="https://www.instagram.com/nyt6vnaa" target="_blank" rel="noopener"><span class="k">Instagram</span><span class="v">@nyt6vnaa</span></a></li>
+      <li><a href="mailto:tursinbaevan09@gmail.com"><span class="k">Pochta</span><span class="v">tursinbaevan09@gmail.com</span></a></li>
+    </ul>
+  </section>
+
+  <footer>© 2026 Tursinbaeva Nasiba Nietbaevna</footer>
+</main>
+</div>
+</body>
+</html>
